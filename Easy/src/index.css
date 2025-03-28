@@ -10,9 +10,15 @@ body{
 }
 .companyTitle h1{
     font-weight: 900;
+    font-size: 60px;
 }
 a{
     text-decoration: none;
+}
+.bookingTabs{
+    box-shadow: 0 0 16px 0px #d3d2d2;
+    border-radius: 10px;
+    padding: 0px 20px;
 }
 .bookingTabs h1{
     font-weight: 900;
@@ -20,5 +26,34 @@ a{
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
     border: unset !important;
+    font-size: 20px;
     border-bottom: #2563eb 3px solid !important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
+    font-size: 18px;
+}
+.Find-Flights,
+.Find-Hotels,
+.CarRental,
+.Packages{
+    line-height: 2rem;
+}
+.Find-Flights input , 
+.Find-Hotels input
+{
+    border-radius: 5px;
+    width: 23%;
+    margin: 5px;
+}
+.CarRental select{
+    width: 23%;
+}
+.Packages input{
+    width: 20%;
+}
+.Find-Flights button , 
+.Find-Hotels button,
+.CarRental button,
+.Packages button{
+    border-radius: 5px;
 }

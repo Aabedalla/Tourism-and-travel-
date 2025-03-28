@@ -29,7 +29,7 @@ function Nav(){
             <a  className="text-white text-2xl font-bold">LifeEase Travel</a>
             <div className="hidden md:flex space-x-6">
                 {nav.map((navBarName ) => (
-                    <a key={navBarName.id} className="text-white font-bold text-lg hover:text-gray-300 transition">{navBarName.navName}</a>
+                    <a key={navBarName.id} href="#" className="text-white font-bold text-lg hover:text-gray-300 transition">{navBarName.navName}</a>
                 ))}
             </div>
             <div className="hidden md:flex space-x-4">
