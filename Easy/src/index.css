@@ -59,3 +59,7 @@ a{
 .tripInfo button{
     border-radius: 5px;
 }
+.aboutPara h2{
+    font-weight: 700;
+    color: #2563eb;
+}

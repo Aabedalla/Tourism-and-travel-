@@ -1,6 +1,9 @@
 import TruvelDeals from "./Traveldeals.jsx"
 import Trip from "./Trip.jsx"
 import React from "react"
+import calendar from '../assets/calendar.png'
+import magnifier from '../assets/magnifier.png'
+import Reviews from '../assets/Reviews.png'
 import Heder from "../assets/header.png"
 import Clint1 from "../assets/clientone.jpg"
 import Clint2 from "../assets/client-2.jpg"
@@ -12,6 +15,8 @@ import company3 from "../assets/03.png"
 import company4 from "../assets/04.png"
 import company5 from "../assets/05.png"
 import company6 from "../assets/06.png"
+import about from '../assets/shenzen.png'
+import Footer from "./Footer.jsx"
 function Homepage(){
 
     const patner = [
@@ -28,6 +33,12 @@ function Homepage(){
         {id:2 , TabName: "Hotels"},
         {id:3 , TabName: "CarRental"},
         {id:4 , TabName: "Packages"},
+    ]
+
+    const carRenta = [
+        {id: 1 , img: calendar , title: "Flexible rentals" , disc: "Cancel or change most bookings for free up to 48 hours before pick-up"},
+        {id: 2 , img: magnifier , title: "No hidden fees" , disc: "Know exactly what you’re paying"},
+        {id: 3 , img: Reviews , title: "5 million+ reviews" , disc: "By real, verified customers"},  
     ]
     return(
         <div>
@@ -195,11 +206,11 @@ function Homepage(){
                     <div className="col-md-4">
                     <div className="bg-[#002e8b] mb-3 text-center text-white rounded-md p-3">
                             <div className="flex user justify-center">
-                                <span class="text-yellow-400 text-6xl">★</span>
-                                <span class="text-yellow-400 text-6xl">★</span>
-                                <span class="text-yellow-400 text-6xl">★</span>
-                                <span class="text-yellow-400 text-6xl">★</span>
-                                <span class="text-yellow-400 text-6xl">★</span>
+                                <span className="text-yellow-400 text-6xl">★</span>
+                                <span className="text-yellow-400 text-6xl">★</span>
+                                <span className="text-yellow-400 text-6xl">★</span>
+                                <span className="text-yellow-400 text-6xl">★</span>
+                                <span className="text-yellow-400 text-6xl">★</span>
                             </div>
                             <div className="userinfo pt-2"> 
                                 <h6 className="text-center text-lg font-bold pb-0">Travelers love us</h6>
@@ -220,8 +231,8 @@ function Homepage(){
                     <div className="flex flex-wrap justify-center">
                         
                         {patner.map((partImg) => (
-                            <div className="col-md-2">
-                                <img key={partImg.id} src={partImg.patnerLogo} className="" />
+                            <div className="col-md-2" key={partImg.id}>
+                                <img  src={partImg.patnerLogo} className="" />
                             </div>
                         ))}
                     </div>
@@ -232,6 +243,53 @@ function Homepage(){
         <TruvelDeals />
 
         <Trip />
+
+        <section>
+            <div className="container">
+                <div className="row">
+                <h1 className="text-center font-bold mt-5">Car rental</h1>
+                    <div className="flex items-center flex-wrap justify-center">
+                        
+                        {carRenta.map((cars) =>(
+                           <div className="col-md-4 p-3" key={cars.id}>
+                             <div className="py-3"> <img  src={cars.img} width={50}></img></div>
+                             <div>
+                                <h6>{cars.title}</h6>
+                                <p>{cars.disc}</p>
+                             </div>
+                           </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section >
+            <div className="container">
+                <div className="row align-items-center my-5">
+                    <div className="col-md-6 mb-4 mb-md-0">
+                        <div className="aboutimg">
+                            <img src={about} className="img-fluid shadow-md rounded shadow-lg" alt="Travel Image"></img>
+                        </div>
+                    </div>
+
+                    <div className="col-md-6">
+                        <div className="aboutPara">
+                            <h2 className="text-blue-600 font-semibold">ABOUT</h2>
+                            <p>
+                                LifeEase Travel is a startup travel agency offering comprehensive travel solutions to individuals and groups seeking hassle-free, comfortable, and memorable travel experiences. Our agency provides a one-stop-shop for all travel needs, including transportation, accommodations, tours, and activities.
+                            </p>
+                            <p>
+                                We generate revenue through commissions from travel bookings, tour sales, and travel-related merchandise. With our expanding customer base and partnerships, we project steady growth in revenue over the next three years.
+                            </p>
+                            <a href="#" className="text-white bg-blue-600 hover:bg-blue-800 rounded-md px-3 py-2">More About</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Footer />
         </div>
     )
 }
