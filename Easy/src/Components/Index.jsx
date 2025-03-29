@@ -1,4 +1,5 @@
 import TruvelDeals from "./Traveldeals.jsx"
+import Trip from "./Trip.jsx"
 import React from "react"
 import Heder from "../assets/header.png"
 import Clint1 from "../assets/clientone.jpg"
@@ -29,7 +30,7 @@ function Homepage(){
         {id:4 , TabName: "Packages"},
     ]
     return(
-        <>
+        <div>
         <style>
         
         </style>
@@ -229,7 +230,9 @@ function Homepage(){
         </section>
 
         <TruvelDeals />
-        </>
+
+        <Trip />
+        </div>
     )
 }
 
